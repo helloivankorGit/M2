@@ -1,0 +1,19 @@
+<div class="card__container lazy-block lazyload">
+    <?php for ($i = 1; $i <= 10; $i++) {?>
+        <a href="<?php echo $this->getUrl('women/outdoor-jackets') ?>" title="" class="link">
+            <div class="card__image">
+                <picture class="lazypic picture">
+                    <img
+                        data-srcset="
+                        <?= $this->getViewFileUrl('images/tmp/woman_jakets.jpg') ?> 203w,
+                        <?= $this->getViewFileUrl('images/tmp/woman_jakets2x.jpg') ?> 406w" 
+                        alt=""
+                        class="lazyload">
+                </picture>
+                <div class="card__title">
+                    <?php echo __('Women\'s jackets') ?>
+                </div>
+            </div>
+        </a>
+    <?php } ?>
+</div>
