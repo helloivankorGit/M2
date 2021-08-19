@@ -1,0 +1,31 @@
+/* in file _responsive.less */
+
+//
+//  Style groups for 'desktop' devices
+//  ---------------------------------------------
+
+& when (@media-target = 'desktop'), (@media-target = 'all') {
+...
+
+  @media (hover: hover) {
+    .media-hover(true)
+  }
+...
+}
+
+/* in any module _some-module.less */ 
+
+.media-hover(@has_hover) when (@has_hover = true) {
+   a:hover {
+      ...
+   }
+}
+
+
+@media (hover: hover), (min-width: 0/0) {
+    .media-hover(true)
+  }
+
+@media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .media-hover(true)
+}
